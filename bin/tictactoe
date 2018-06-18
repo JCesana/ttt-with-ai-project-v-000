@@ -2,7 +2,7 @@
 
 require_relative '../config/environment'
 
-puts "Welcome to Tic Tac Toe with AI!"
+puts "Welcome to Tic Tac Toe with AI."
 
 play_again = 'y'
 
@@ -14,14 +14,6 @@ while play_again == 'y'
 
   if !(0..2).include?(number_of_players) && number_of_players != "wargames"
     puts "Invalid input. Exiting Tic Tac Toe."
-  elseif number_of_players == "wargames"
-    puts "Welcome to WarGames. The AI will play itself 100 times." 
-    puts "Press enter to start."
-    foo = gets
-    game.wargames 
-    
-    puts "Would you like to play again? (y/n)"
-    play_again = gets.strip 
   else 
     case number_of_players
     when 0 
@@ -46,6 +38,11 @@ while play_again == 'y'
       puts "An all human game is about to start. 'X' will go first."
       game = Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"))
       game.play 
+    when "wargames"
+      puts "Welcome to WarGames. The AI will play itself 100 times." 
+      puts "Press enter to start."
+      foo = gets
+      game.wargames
     end 
     
     puts "Would you like to play again? (y/n)"
