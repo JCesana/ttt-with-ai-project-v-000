@@ -65,6 +65,11 @@ module Players
     
     def can_they_win?(board)
       WIN_COMBINATIONS.detect do |combination|
+        
+        if board.cells[6] == "O"
+          binding.pry 
+        end 
+        
         position_1 = board.cells[combination[0]]
         position_2 = board.cells[combination[1]]
         position_3 = board.cells[combination[2]]
