@@ -78,6 +78,7 @@ module Players
         #   binding.pry 
         # end 
         
+        # true if 2 out of 3 spots are opponent's token, and 1 spot is empty 
         [position_1, position_2, position_3].count(@opponent_token) == 2 &&
         [position_1, position_2, position_3].count(" ") == 1
       end 
