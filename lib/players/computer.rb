@@ -132,7 +132,8 @@ module Players
         position = block_the_win(board)
       elsif can_we_fork?(board)
         position = play_the_fork(board)
-        binding.pry 
+      elsif can_they_fork?(board)
+        position = block_the_fork(board)
       elsif center(board)
         position = center(board)
       elsif empty_corner(board)
