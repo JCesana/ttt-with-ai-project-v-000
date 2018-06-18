@@ -121,6 +121,7 @@ module Players
     end 
     
     def opposite_corner(board)
+      
     end 
     
     def empty_corner(board)
