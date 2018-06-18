@@ -155,7 +155,6 @@ module Players
       elsif center(board)
         position = center(board)
       elsif empty_corner(board)
-      
         position = empty_corner(board)
         binding.pry 
         
