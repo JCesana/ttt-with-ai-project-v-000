@@ -147,13 +147,13 @@ module Players
     end 
     
     def opposite_corner(board)
-      if board.cells[0] == @opponent_token && board.cells[8] == " "
+      if board.cells[0] == @opponent_token && board.valid_move(9)
         position = 9
-      elsif board.cells[2] == @opponent_token && board.cells[6] == " "
+      elsif board.cells[2] == @opponent_token && board.valid_move(7)
         position = 7
-      elsif board.cells[6] == @opponent_token && board.cells[2] == " "
+      elsif board.cells[6] == @opponent_token && board.valid_move(3)
         position = 3
-      elsif board.cells[9] == @opponent_token && board.cells[0] == " "
+      elsif board.cells[9] == @opponent_token && board.valid_move(1)
         position = 1
       end 
     end 
