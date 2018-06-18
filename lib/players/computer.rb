@@ -152,7 +152,7 @@ module Players
       
       if can_we_win?(board)
         position = play_the_win(board)
-      elsif can_they_win?(board)
+      elsif can_they_win?(board) != nil 
         position = block_the_win(board)
         binding.pry 
       elsif can_we_fork?(board)
