@@ -127,13 +127,13 @@ module Players
       position = nil 
       
       if board.cells[0] == " "
-        position = "1" 
+        position = 1 
       elsif board.cells[2] == " "
-        position = "3" 
+        position = 3 
       elsif board.cells[6] == " "
-        position = "7" 
+        position = 7 
       elsif board.cells[8] == " " 
-        position = "9" 
+        position = 9 
       end 
       position 
     end 
