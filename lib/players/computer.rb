@@ -174,6 +174,18 @@ module Players
     end 
     
     def empty_side(board)
+      position = nil 
+      
+      if board.valid_move?(2)
+        position = 2
+      elsif board.valid_move?(4)
+        position = 4
+      elsif board.valid_move?(6)
+        position = 6
+      elsif board.valid_move?(8)
+        position = 8
+      end 
+      position
     end 
     
     
