@@ -13,6 +13,8 @@ module Players
     # Empty Corner: Play empty corner position 
     # Empty Side: Play an empty side position 
     # Game Over: If none are available, game is over! 
+    
+    # BONUS: 'wargames' input at # of players prompt enters in to 100 AI v AI games, displaying results (ties, wins, losses)
 
     WIN_COMBINATIONS = [
       [0, 1, 2], # top row
