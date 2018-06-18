@@ -15,11 +15,11 @@ while play_again == 'y'
     puts "Invalid input. Exiting Tic Tac Toe."
   else 
     case number_of_players
-    when 0 
+    when "0" 
       puts "AI vs AI."
       game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
       game.play  
-    when 1 
+    when "1" 
       puts "Would you like to be 'X' or 'O'? 'X' goes first. (x/o)"
       token_choice = gets.strip 
       while !['x', 'o'].include?(token_choice)
@@ -33,7 +33,7 @@ while play_again == 'y'
         game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O"))
         game.play 
       end 
-    when 2 
+    when "2" 
       puts "An all human game is about to start. 'X' will go first."
       game = Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"))
       game.play 
