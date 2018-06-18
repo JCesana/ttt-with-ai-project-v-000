@@ -32,13 +32,7 @@ module Players
       [2, 4, 8],
       [6, 4, 8]
     ]
-    
-    if @token == "X"
-        @opponent_token = "O"
-      else 
-        @opponent_token = "X"
-    end 
-    
+ 
     def can_we_win?(board)
       WIN_COMBINATIONS.detect do |combination|
         position_1 = board.cells[combination[0]]
