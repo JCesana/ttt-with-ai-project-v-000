@@ -155,8 +155,9 @@ module Players
       elsif center(board)
         position = center(board)
       elsif empty_corner(board)
-        # FIX ME
+      
         position = empty_corner(board)
+        binding.pry 
         
       # FIRST AVAILABLE EMPTY POSITION: 
       elsif board.cells.index(" ")
