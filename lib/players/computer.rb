@@ -58,8 +58,12 @@ module Players
         position_1 = board.cells[combination[0]]
         position_2 = board.cells[combination[1]]
         position_3 = board.cells[combination[2]]
-
-        [position_1, position_2, position_3].count(@opponent_token) == 2 &&
+        
+        if board.cells[6] == "O"
+          binding.pry 
+        end 
+        
+        [position_1, position_2, position_3].count(@self.token) == 2 &&
         [position_1, position_2, position_3].count(" ") == 1
       end 
     end 
