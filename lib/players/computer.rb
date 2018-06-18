@@ -91,6 +91,7 @@ module Players
       position = winning_combo[2] if board.valid_move?(winning_combo[2] + 1)
       position += 1 
       position.to_s
+      binding.pry 
     end 
     
     def can_we_fork?(board)
