@@ -146,9 +146,7 @@ module Players
     def move(board)
       position = nil 
       
-      if board.cells[6] == "O"
-        binding.pry 
-      end
+      binding.pry 
       
       if can_we_win?(board)
         position = play_the_win(board)
