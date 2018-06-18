@@ -69,6 +69,10 @@ class Game
         turn
         @board.display
       end
+      cats +=1 if draw? 
+    end 
+    
+    puts "Total cat's games: #{cats} out of 100 games."
   end 
   
 end 
