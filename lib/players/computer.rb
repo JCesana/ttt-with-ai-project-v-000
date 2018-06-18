@@ -35,27 +35,29 @@ module Players
     def move(board)
       position = nil 
       
-      if can_we_win?(board)
-        position = play_the_win(board)
-      elsif can_they_win?(board)
-        position = block_the_win(board)
-      elsif can_we_fork?(board)
-        position = play_the_fork(board)
-      elsif can_they_fork?(board)
-        position = block_the_fork(board)
-      elsif center(board)
-        position = center(board)
-      elsif opposite_corner(board)
-        position = opposite_corner(board)
-      elsif empty_corner(board)
-        position = empty_corner(board)
-      elsif empty_side(board)
-        position = empty_side(board)
+      position = empty_side(board)
+      
+      # if can_we_win?(board)
+      #   position = play_the_win(board)
+      # elsif can_they_win?(board)
+      #   position = block_the_win(board)
+      # elsif can_we_fork?(board)
+      #   position = play_the_fork(board)
+      # elsif can_they_fork?(board)
+      #   position = block_the_fork(board)
+      # elsif center(board)
+      #   position = center(board)
+      # elsif opposite_corner(board)
+      #   position = opposite_corner(board)
+      # elsif empty_corner(board)
+      #   position = empty_corner(board)
+      # elsif empty_side(board)
+      #   position = empty_side(board)
         
-      # FIRST AVAILABLE EMPTY POSITION: 
-      elsif board.cells.index(" ")
-        position = board.cells.index(" ") + 1 
-      end 
+      # # FIRST AVAILABLE EMPTY POSITION: 
+      # elsif board.cells.index(" ")
+      #   position = board.cells.index(" ") + 1 
+      # end 
       position.to_s 
     end 
     
