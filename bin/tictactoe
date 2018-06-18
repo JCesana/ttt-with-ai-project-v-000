@@ -19,6 +19,9 @@ while play_again == 'y'
     puts "Press enter to start."
     foo = gets
     game.wargames 
+    
+    puts "Would you like to play again? (y/n)"
+    play_again = gets.strip 
   else 
     case number_of_players
     when 0 
