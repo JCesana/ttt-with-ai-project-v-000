@@ -32,7 +32,33 @@ module Players
       [2, 4, 8],
       [6, 4, 8]
     ]
- 
+    
+    def move(board)
+      position = nil 
+      
+      if can_we_win?(board)
+        position = play_the_win(board)
+      elsif can_they_win?(board)
+        position = block_the_win(board)
+      elsif can_we_fork?(board)
+        position = play_the_fork(board)
+      elsif can_they_fork?(board)
+        position = block_the_fork(board)
+      elsif center(board)
+        position = center(board)
+      elsif opposite_corner(board)
+        position = opposite_corner(board)
+      elsif empty_corner(board)
+        position = empty_corner(board)
+        binding.pry 
+        
+      # FIRST AVAILABLE EMPTY POSITION: 
+      elsif board.cells.index(" ")
+        position = board.cells.index(" ") + 1 
+      end 
+      position.to_s 
+    end 
+    
     def can_we_win?(board)
       WIN_COMBINATIONS.detect do |combination|
         position_1 = board.cells[combination[0]]
@@ -142,31 +168,7 @@ module Players
     def empty_side(board)
     end 
     
-    def move(board)
-      position = nil 
-      
-      if can_we_win?(board)
-        position = play_the_win(board)
-      elsif can_they_win?(board)
-        position = block_the_win(board)
-      elsif can_we_fork?(board)
-        position = play_the_fork(board)
-      elsif can_they_fork?(board)
-        position = block_the_fork(board)
-      elsif center(board)
-        position = center(board)
-      elsif opposite_corner(board)
-        position = opposite_corner(board)
-      elsif empty_corner(board)
-        position = empty_corner(board)
-        binding.pry 
-        
-      # FIRST AVAILABLE EMPTY POSITION: 
-      elsif board.cells.index(" ")
-        position = board.cells.index(" ") + 1 
-      end 
-      position.to_s 
-    end 
+    
     
   end 
 end 
