@@ -41,6 +41,7 @@ while play_again == 'y'
       puts "Welcome to WarGames. The AI will play itself 100 times." 
       puts "Press enter to start."
       foo = gets
+      game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
       game.wargames
     end 
     
