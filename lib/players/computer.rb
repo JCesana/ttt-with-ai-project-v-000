@@ -59,20 +59,14 @@ module Players
         position_2 = board.cells[combination[1]]
         position_3 = board.cells[combination[2]]
         
-        if board.cells[6] == "O" && combination == [0, 3, 6]
-          binding.pry 
-        end 
-        
         [position_1, position_2, position_3].count(@opponent_token) == 2 &&
         [position_1, position_2, position_3].count(" ") == 1
       end 
     end 
     
     def block_the_win(board)
-      binding.pry 
       winning_combo = can_they_win?(board)
       
-      binding.pry 
       position = winning_combo[0] if board.valid_move?(winning_combo[0] + 1)
       position = winning_combo[1] if board.valid_move?(winning_combo[1] + 1)
       position = winning_combo[2] if board.valid_move?(winning_combo[2] + 1)
