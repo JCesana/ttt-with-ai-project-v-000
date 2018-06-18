@@ -4,12 +4,12 @@ module Players
   class Computer < Player
 
     # UNBEATABLE AI STRATEGY:
-    # Check for Win: if we have 2 in a row, play the 3rd to win
-    # Check for Block: if opponent has 2 in a row, play the 3rd to block 
-    # Fork: if opportunity to create a fork (2 opportunites to win)
-    # Block Fork: if opponent has opportunity to fork, play to block 
-    # Center: play center position if available 
-    # Opposite Corner: if opponent is in corner, play opposite corner
+    # Win: If we have 2 in a row, play the 3rd to win
+    # Block: If opponent has 2 in a row, play the 3rd to block 
+    # Fork: If opportunity to create a fork (2 opportunites to win)
+    # Block Fork: If opponent has opportunity to fork, play to block 
+    # Center: Play center position if available 
+    # Opposite Corner: If opponent is in corner, play opposite corner
     # Empty Corner: Play empty corner position 
     # Empty Side: Play an empty side position 
     # Game Over: If none are available, game is over! 
