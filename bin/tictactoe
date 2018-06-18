@@ -12,8 +12,11 @@ while play_again == 'y'
   number_of_players_input = gets.strip 
   number_of_players = number_of_players_input.to_i
 
-  if !(0..2).include?(number_of_players)
+  if !(0..2).include?(number_of_players) && number_of_players != "wargames"
     puts "Invalid input. Exiting Tic Tac Toe."
+  elseif number_of_players == "wargames"
+    puts "Welcome to WarGames. The AI will play itself 100 times." 
+    game.wargames 
   else 
     case number_of_players
     when 0 
