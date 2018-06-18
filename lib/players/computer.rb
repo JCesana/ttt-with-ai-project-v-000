@@ -54,6 +54,12 @@ module Players
     end 
     
     def can_they_win?(board)
+      if @token == "X"
+        opponent_token = "O"
+      else 
+        opponent_token = "X"
+      end 
+      
       WIN_COMBINATIONS.detect do |combination|
         position_1 = board.cells[combination[0]]
         position_2 = board.cells[combination[1]]
@@ -63,7 +69,7 @@ module Players
           binding.pry 
         end 
         
-        [position_1, position_2, position_3].count(@self.token) == 2 &&
+        [position_1, position_2, position_3].count(opponent_token) == 2 &&
         [position_1, position_2, position_3].count(" ") == 1
       end 
     end 
