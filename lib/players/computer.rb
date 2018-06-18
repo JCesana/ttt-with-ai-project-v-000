@@ -49,7 +49,8 @@ module Players
         position = opposite_corner(board)
       elsif empty_corner(board)
         position = empty_corner(board)
-        binding.pry 
+      elsif empty_side(board)
+        position = empty_side(board)
         
       # FIRST AVAILABLE EMPTY POSITION: 
       elsif board.cells.index(" ")
