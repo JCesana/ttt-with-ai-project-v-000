@@ -95,6 +95,10 @@ module Players
       position.to_s 
     end 
     
+    def can_they_fork?(board)
+      
+    end 
+    
     def block_fork(board)
     end 
     
