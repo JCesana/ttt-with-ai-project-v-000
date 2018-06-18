@@ -60,19 +60,30 @@ class Game
   end 
   
   def wargames
-    wins = 0 
-    losses = 0 
-    cats = 0 
+    x_wins = 0 
+    0_wins = 0 
+    ties = 0 
     
     100.times do 
       while !over? do 
         turn
         @board.display
       end
-      cats +=1 if draw? 
+      
+      cats += 1 if draw? 
+      
+      if won?
+        x_wins += 1 if winner == "X"
+        o_wins += 1 if winner == "O"
+      end
+      
     end 
     
-    puts "Total cat's games: #{cats} out of 100 games."
+    puts "After 100 AI vs AI games..."
+    puts "Total tie games: #{ties} out of 100 games."
+    puts "Total wins for 'X': #{x_wins} out of 100 games."
+    puts "Total wins for 'O': #{o_wins} out of 100 games."
+    
   end 
   
 end 
