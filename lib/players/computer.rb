@@ -154,6 +154,8 @@ module Players
         position = block_the_fork(board)
       elsif center(board)
         position = center(board)
+      elsif opposite_corner(board)
+        position = opposite_corner(board)
       elsif empty_corner(board)
         position = empty_corner(board)
         binding.pry 
