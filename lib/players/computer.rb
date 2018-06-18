@@ -74,7 +74,7 @@ module Players
         [position_1, position_2, position_3].count(@opponent_token) == 2 &&
         [position_1, position_2, position_3].count(" ") == 1
         
-        if combination == [0, 3, 6]
+        if combination == [0, 3, 6] && board.cells[6] == "O"
           binding.pry 
         end 
         
