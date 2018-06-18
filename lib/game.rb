@@ -61,7 +61,7 @@ class Game
   
   def wargames
     x_wins = 0 
-    0_wins = 0 
+    o_wins = 0 
     ties = 0 
     
     100.times do 
