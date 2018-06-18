@@ -70,7 +70,7 @@ class Game
         @board.display
       end
       
-      cats += 1 if draw? 
+      ties += 1 if draw? 
       
       if won?
         x_wins += 1 if winner == "X"
