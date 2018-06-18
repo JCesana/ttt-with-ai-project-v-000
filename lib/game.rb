@@ -65,7 +65,7 @@ class Game
     ties = 0 
     
     100.times do 
-      while !over? do 
+      while !over? 
         turn
         @board.display
       end
