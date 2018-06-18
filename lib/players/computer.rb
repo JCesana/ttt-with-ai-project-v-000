@@ -97,7 +97,7 @@ module Players
     
     def play_the_fork(board)
       winning_combo = can_we_fork?(board)
-      binding.pry 
+
       position = winning_combo[0] if board.valid_move?(winning_combo[0] + 1)
       position = winning_combo[1] if board.valid_move?(winning_combo[1] + 1)
       position = winning_combo[2] if board.valid_move?(winning_combo[2] + 1)
