@@ -65,11 +65,11 @@ module Players
     end 
     
     def block_the_win(board)
-      winning_combo = can_they_win?(board)
+      matching_combo = can_they_win?(board)
       
-      position = winning_combo[0] if board.valid_move?(winning_combo[0] + 1)
-      position = winning_combo[1] if board.valid_move?(winning_combo[1] + 1)
-      position = winning_combo[2] if board.valid_move?(winning_combo[2] + 1)
+      position = matching_combo[0] if board.valid_move?(matching_combo[0] + 1)
+      position = matching_combo[1] if board.valid_move?(matching_combo[1] + 1)
+      position = matching_combo[2] if board.valid_move?(matching_combo[2] + 1)
       position += 1 
       position.to_s
     end 
@@ -86,11 +86,11 @@ module Players
     end 
     
     def play_the_fork(board)
-      winning_combo = can_we_fork?(board)
+      matching_combo = can_we_fork?(board)
 
-      position = winning_combo[0] if board.valid_move?(winning_combo[0] + 1)
-      position = winning_combo[1] if board.valid_move?(winning_combo[1] + 1)
-      position = winning_combo[2] if board.valid_move?(winning_combo[2] + 1)
+      position = matching_combo[0] if board.valid_move?(matching_combo[0] + 1)
+      position = matching_combo[1] if board.valid_move?(matching_combo[1] + 1)
+      position = matching_combo[2] if board.valid_move?(matching_combo[2] + 1)
       position += 1 
       position.to_s 
     end 
