@@ -3,7 +3,7 @@ class Player
   
   def initialize(token)
     @token = token
-    @opponent_token = "O" if @token = "X"
-    @opponent_token = "X" if @token = "O"
+    @opponent_token = "O" if @token == "X"
+    @opponent_token = "X" if @token == "O"
   end 
 end 
