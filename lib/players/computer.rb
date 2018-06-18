@@ -35,8 +35,6 @@ module Players
     def move(board)
       position = nil 
       
-      position = empty_side(board)
-      
       if can_we_win?(board)
         position = play_the_win(board)
       elsif can_they_win?(board)
@@ -53,11 +51,8 @@ module Players
         position = empty_corner(board)
       elsif empty_side(board)
         position = empty_side(board)
-        
-      # FIRST AVAILABLE EMPTY POSITION: 
-      elsif board.cells.index(" ")
-        position = board.cells.index(" ") + 1 
-      end 
+      end   
+      
       position.to_s 
     end 
     
