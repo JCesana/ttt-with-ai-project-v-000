@@ -10,9 +10,8 @@ while play_again == 'y'
 
   puts "How many human players? (0-2)"
   number_of_players_input = gets.strip 
-  number_of_players = number_of_players_input.to_i
-
-  if !(0..2).include?(number_of_players) && number_of_players != "wargames"
+  
+  if ["0", "1", "2", "wargames"].count(number_of_players_input) == 0  
     puts "Invalid input. Exiting Tic Tac Toe."
   else 
     case number_of_players
