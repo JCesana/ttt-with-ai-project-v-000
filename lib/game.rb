@@ -58,4 +58,17 @@ class Game
     puts "Congratulations #{winner}!" if won?
     puts "Cat's Game!" if draw?
   end 
+  
+  def wargames
+    wins = 0 
+    losses = 0 
+    cats = 0 
+    
+    100.times do 
+      while !over? do 
+        turn
+        @board.display
+      end
+  end 
+  
 end 
