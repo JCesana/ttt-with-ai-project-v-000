@@ -142,8 +142,6 @@ module Players
       # FIRST AVAILABLE EMPTY POSITION: 
       elsif board.cells.index(" ")
         position = board.cells.index(" ") + 1 
-      else 
-        nil 
       end 
       position.to_s 
     end 
