@@ -63,6 +63,7 @@ class Game
     x_wins = 0 
     o_wins = 0 
     ties = 0 
+    game_count = 0 
     
     100.times do 
       while !over? 
@@ -76,10 +77,10 @@ class Game
         x_wins += 1 if winner == "X"
         o_wins += 1 if winner == "O"
       end
-      
+      game_count += 1 
     end 
     
-    puts "After 100 AI vs AI games..."
+    puts "After #{game_count} AI vs AI games..."
     puts "Total tie games: #{ties} out of 100 games."
     puts "Total wins for 'X': #{x_wins} out of 100 games."
     puts "Total wins for 'O': #{o_wins} out of 100 games."
