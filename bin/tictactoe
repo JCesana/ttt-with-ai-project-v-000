@@ -16,6 +16,8 @@ while play_again == 'y'
     puts "Invalid input. Exiting Tic Tac Toe."
   elseif number_of_players == "wargames"
     puts "Welcome to WarGames. The AI will play itself 100 times." 
+    puts "Press enter to start."
+    foo = gets
     game.wargames 
   else 
     case number_of_players
