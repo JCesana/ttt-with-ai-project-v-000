@@ -2,11 +2,10 @@ require 'pry'
 
 module Players
   class Computer < Player
-    # SOME NOT YET IMPLEMENTED: 
-      
-    # ORDER OF RULES:
-    # Win: if we have 2 in a row, play the 3rd to win
-    # Block: if opponent has 2 in a row, play the 3rd to block 
+
+    # UNBEATABLE AI STRATEGY:
+    # Check for Win: if we have 2 in a row, play the 3rd to win
+    # Check for Block: if opponent has 2 in a row, play the 3rd to block 
     # Fork: if opportunity to create a fork (2 opportunites to win)
     # Block Fork: if opponent has opportunity to fork, play to block 
     # Center: play center position if available 
