@@ -14,9 +14,7 @@ module Players
     # Empty Corner: Play empty corner position 
     # Empty Side: Play an empty side position 
     # Game Over: If none are available, game is over! 
-    
-    attr_accessor :opponent_token
-    
+
     WIN_COMBINATIONS = [
       [0, 1, 2], # top row
       [3, 4, 5], # middle row
@@ -34,14 +32,6 @@ module Players
       [2, 4, 8],
       [6, 4, 8]
     ]
-    
-    def opponent_token
-      if @token == "O"
-        @opponent_token = "X"
-      else 
-        @opponent_token = "O"
-      end 
-    end 
     
     def can_we_win?(board)
       WIN_COMBINATIONS.detect do |combination|
