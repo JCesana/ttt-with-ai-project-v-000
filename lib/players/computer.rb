@@ -96,10 +96,24 @@ module Players
     end 
     
     def can_they_fork?(board)
-      
+      FORK_COMBINATIONS.detect do |combination|
+        position_1 = board.cells[combination[0]]
+        position_2 = board.cells[combination[1]]
+        position_3 = board.cells[combination[2]]
+
+        [position_1, position_2, position_3].count(@opponent_token) == 2 &&
+        [position_1, position_2, position_3].count(" ") == 1
+      end 
     end 
     
-    def block_fork(board)
+    def block_the_fork(board)
+      matching_combo = can_they_fork?(board)
+
+      position = matching_combo[0] if board.valid_move?(matching_combo[0] + 1)
+      position = matching_combo[1] if board.valid_move?(matching_combo[1] + 1)
+      position = matching_combo[2] if board.valid_move?(matching_combo[2] + 1)
+      position += 1 
+      position.to_s 
     end 
     
     def center(board)
