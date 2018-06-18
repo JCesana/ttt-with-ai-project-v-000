@@ -80,10 +80,10 @@ class Game
       game_count += 1 
     end 
     
-    puts "After #{game_count} AI vs AI games..."
-    puts "Total tie games: #{ties} out of 100 games."
-    puts "Total wins for 'X': #{x_wins} out of 100 games."
-    puts "Total wins for 'O': #{o_wins} out of 100 games."
+    puts "After #{game_count} AI vs AI games:"
+    puts " -ties: #{ties}"
+    puts " -'X' wins: #{x_wins}"
+    puts " -'O' wins: #{o_wins}"
     
   end 
   
