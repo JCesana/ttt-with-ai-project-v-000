@@ -140,7 +140,7 @@ module Players
     end 
     
     def center(board)
-      "5" if board.cells[4] == " "
+      "5" if board.valid_move?(5)
     end 
     
     def opposite_corner(board)
