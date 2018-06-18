@@ -146,7 +146,15 @@ module Players
     end 
     
     def opposite_corner(board)
-      
+      if board.cells[0] == @opponent_token && board.cells[8] == " "
+        position = 9
+      elsif board.cells[2] == @opponent_token && board.cells[6] == " "
+        position = 7
+      elsif board.cells[6] == @opponent_token && board.cells[2] == " "
+        position = 3
+      elsif board.cells[9] == @opponent_token && board.cells[0] == " "
+        position = 1
+      end 
     end 
     
     def empty_corner(board)
